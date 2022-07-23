@@ -63,7 +63,7 @@ function groupAnagrams(words) {
 function hashWord(word) {
     const hash = new Array(26).fill(0);
     for (const ch of word) {
-        ++hash[CODES[ch]];
+        ++hash[ch.charCodeAt(0) - 'a'.charCodeAt(0)]]; // You can get rid of CODES Object
     }
     return hash.toString();
 }
